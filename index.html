@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaito Rank Checker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .twitter-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #1DA1F2;
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .twitter-btn:hover {
+            background-color: #0c84d4;
+        }
+
+        .info-text, .search-tip{
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #leaderboardForm {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        #leaderboardForm select {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            flex: 1 1 100px;
+            font-size: 14px;
+        }
+
+        #leaderboardForm button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        #leaderboardForm button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            width: 90%;
+            max-width: 1000px;
+            min-height: 300px;
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        .search-tip {
+            text-align: center;
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            #leaderboardForm {
+                flex-direction: column;
+            }
+
+            #leaderboardForm select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kaito Rank Checker</h1>
+    <a href="https://x.com/problogger10" class="twitter-btn" target="_blank">Follow @problogger10</a>
+    <div class="info-text">If you're not in the top 10 and want to check your rank, use the tool below to find out where you stand.</div>
+    <form id="leaderboardForm">
+        <select id="protocol">
+            <option value="STORYPROTOCOL">Story Protocol</option>
+            <option value="ECLIPSE">Eclipse</option>
+            <option value="BERA">Bera</option>
+            <option value="XION">XION</option>
+            <option value="QUAI">QUAI</option>
+            <option value="ANIME">ANIME</option>
+            <option value="KAITO">KAITO</option>
+            <option value="MONAD">MONAD</option>
+            <option value="MANTLE">MANTLE</option>
+            <option value="INITIA">INITIA</option>
+        </select>
+        <select id="duration">
+            <option value="7d">7 Days</option>
+            <option value="30d">30 Days</option>
+            <option value="3m">3 Months</option>
+            <option value="6m">6 Months</option>
+        </select>
+        <button type="submit">Check Rank</button>
+    </form>
+    <p class="search-tip">Once you click 'Check Rank', wait 30-60 seconds and use Ctrl + F to search for your username to check your rank and other details.</p>
+    <div id="result"></div>
+    <div class="copyright">© 2023 Kaito Rank Checker. All rights reserved.</div>
+
+   
+
+
+<script src="script.js"></script>
+</body>
+</html>
